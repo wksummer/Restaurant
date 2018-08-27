@@ -15,5 +15,10 @@ namespace Restaurant
         {
             InitializeComponent();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
