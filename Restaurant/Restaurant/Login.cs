@@ -18,6 +18,23 @@ namespace Restaurant
 
         private void Login_Load(object sender, EventArgs e)
         {
+            txtUser.Focus();
+        }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+            string userName = txtUser.Text;
+            string passWord = txtPkey.Text;
+            if (userName == string.Empty || userName.Equals(" "))
+            {
+                MessageBox.Show("请输入用户名！", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUser.Focus();
+            }
+            else if (passWord == string.Empty || passWord.Equals(" "))
+            {
+                MessageBox.Show("请输入密码！", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPkey.Focus();
+            }
 
         }
     }
