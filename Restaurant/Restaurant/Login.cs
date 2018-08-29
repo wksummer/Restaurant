@@ -35,7 +35,12 @@ namespace Restaurant
                 MessageBox.Show("请输入密码！", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPkey.Focus();
             }
+        }
 
+        private void btnChg_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new 修改密码().Show();
         }
     }
 }

@@ -47,9 +47,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 48);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(117, 81);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -57,9 +58,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("华文琥珀", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(144, 78);
+            this.label1.Location = new System.Drawing.Point(192, 98);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 25);
+            this.label1.Size = new System.Drawing.Size(372, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "The Megalodon Restaurant";
             // 
@@ -67,9 +69,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("华文琥珀", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(202, 28);
+            this.label2.Location = new System.Drawing.Point(269, 35);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 25);
+            this.label2.Size = new System.Drawing.Size(172, 31);
             this.label2.TabIndex = 2;
             this.label2.Text = "Welcome to";
             // 
@@ -77,9 +80,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("华文琥珀", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(91, 144);
+            this.label3.Location = new System.Drawing.Point(121, 180);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 14);
+            this.label3.Size = new System.Drawing.Size(60, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "User：";
             // 
@@ -87,33 +91,37 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("华文琥珀", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(59, 176);
+            this.label4.Location = new System.Drawing.Point(79, 220);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 14);
+            this.label4.Size = new System.Drawing.Size(101, 18);
             this.label4.TabIndex = 4;
             this.label4.Text = "Password：";
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(151, 137);
+            this.txtUser.Location = new System.Drawing.Point(201, 171);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(187, 21);
+            this.txtUser.Size = new System.Drawing.Size(248, 25);
             this.txtUser.TabIndex = 5;
             // 
             // txtPkey
             // 
-            this.txtPkey.Location = new System.Drawing.Point(151, 176);
+            this.txtPkey.Location = new System.Drawing.Point(201, 220);
+            this.txtPkey.Margin = new System.Windows.Forms.Padding(4);
             this.txtPkey.Name = "txtPkey";
-            this.txtPkey.Size = new System.Drawing.Size(187, 21);
+            this.txtPkey.Size = new System.Drawing.Size(248, 25);
             this.txtPkey.TabIndex = 6;
             // 
             // rdoNorm
             // 
             this.rdoNorm.AutoSize = true;
             this.rdoNorm.Font = new System.Drawing.Font("宋体", 9F);
-            this.rdoNorm.Location = new System.Drawing.Point(161, 218);
+            this.rdoNorm.Location = new System.Drawing.Point(215, 272);
+            this.rdoNorm.Margin = new System.Windows.Forms.Padding(4);
             this.rdoNorm.Name = "rdoNorm";
-            this.rdoNorm.Size = new System.Drawing.Size(71, 16);
+            this.rdoNorm.Size = new System.Drawing.Size(88, 19);
             this.rdoNorm.TabIndex = 7;
             this.rdoNorm.TabStop = true;
             this.rdoNorm.Text = "普通用户";
@@ -123,9 +131,10 @@
             // 
             this.rdoAdm.AutoSize = true;
             this.rdoAdm.Font = new System.Drawing.Font("宋体", 9F);
-            this.rdoAdm.Location = new System.Drawing.Point(268, 218);
+            this.rdoAdm.Location = new System.Drawing.Point(357, 272);
+            this.rdoAdm.Margin = new System.Windows.Forms.Padding(4);
             this.rdoAdm.Name = "rdoAdm";
-            this.rdoAdm.Size = new System.Drawing.Size(59, 16);
+            this.rdoAdm.Size = new System.Drawing.Size(73, 19);
             this.rdoAdm.TabIndex = 8;
             this.rdoAdm.TabStop = true;
             this.rdoAdm.Text = "管理员";
@@ -133,9 +142,10 @@
             // 
             // btnLog
             // 
-            this.btnLog.Location = new System.Drawing.Point(77, 254);
+            this.btnLog.Location = new System.Drawing.Point(103, 318);
+            this.btnLog.Margin = new System.Windows.Forms.Padding(4);
             this.btnLog.Name = "btnLog";
-            this.btnLog.Size = new System.Drawing.Size(75, 23);
+            this.btnLog.Size = new System.Drawing.Size(100, 29);
             this.btnLog.TabIndex = 9;
             this.btnLog.Text = "登录";
             this.btnLog.UseVisualStyleBackColor = true;
@@ -143,28 +153,31 @@
             // 
             // btnChg
             // 
-            this.btnChg.Location = new System.Drawing.Point(188, 254);
+            this.btnChg.Location = new System.Drawing.Point(251, 318);
+            this.btnChg.Margin = new System.Windows.Forms.Padding(4);
             this.btnChg.Name = "btnChg";
-            this.btnChg.Size = new System.Drawing.Size(75, 23);
+            this.btnChg.Size = new System.Drawing.Size(100, 29);
             this.btnChg.TabIndex = 10;
             this.btnChg.Text = "修改密码";
             this.btnChg.UseVisualStyleBackColor = true;
+            this.btnChg.Click += new System.EventHandler(this.btnChg_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(298, 254);
+            this.btnExit.Location = new System.Drawing.Point(397, 318);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(100, 29);
             this.btnExit.TabIndex = 11;
             this.btnExit.Text = "退出";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(452, 302);
+            this.ClientSize = new System.Drawing.Size(603, 378);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnChg);
             this.Controls.Add(this.btnLog);
@@ -178,7 +191,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "点餐系统";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
