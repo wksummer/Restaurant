@@ -33,8 +33,13 @@ namespace Restaurant
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool flag = false;//数据库操作是否成功
             //
             //数据库修改
+            if(flag)
+            {
+                 //模态对话框
+            }
             this.Close();
             new Login().Show();
         }
