@@ -39,7 +39,7 @@ namespace Restaurant
 
         private void btnChg_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Visible=false;
             new 修改密码().Show();
         }
     }

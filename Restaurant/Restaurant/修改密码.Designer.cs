@@ -32,15 +32,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.TextBox();
+            this.NEWPASS = new System.Windows.Forms.TextBox();
+            this.NEWPASS1 = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.OLDPASS = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -85,26 +85,26 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "确认新密码:";
             // 
-            // textBox1
+            // ID
             // 
-            this.textBox1.Location = new System.Drawing.Point(255, 132);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 25);
-            this.textBox1.TabIndex = 4;
+            this.ID.Location = new System.Drawing.Point(255, 88);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(203, 25);
+            this.ID.TabIndex = 4;
             // 
-            // textBox2
+            // NEWPASS
             // 
-            this.textBox2.Location = new System.Drawing.Point(255, 181);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 25);
-            this.textBox2.TabIndex = 5;
+            this.NEWPASS.Location = new System.Drawing.Point(255, 181);
+            this.NEWPASS.Name = "NEWPASS";
+            this.NEWPASS.Size = new System.Drawing.Size(203, 25);
+            this.NEWPASS.TabIndex = 6;
             // 
-            // textBox3
+            // NEWPASS1
             // 
-            this.textBox3.Location = new System.Drawing.Point(255, 228);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(203, 25);
-            this.textBox3.TabIndex = 6;
+            this.NEWPASS1.Location = new System.Drawing.Point(255, 228);
+            this.NEWPASS1.Name = "NEWPASS1";
+            this.NEWPASS1.Size = new System.Drawing.Size(203, 25);
+            this.NEWPASS1.TabIndex = 7;
             // 
             // radioButton1
             // 
@@ -112,7 +112,7 @@
             this.radioButton1.Location = new System.Drawing.Point(255, 274);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(88, 19);
-            this.radioButton1.TabIndex = 7;
+            this.radioButton1.TabIndex = 8;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "普通用户";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@
             this.radioButton2.Location = new System.Drawing.Point(385, 274);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(73, 19);
-            this.radioButton2.TabIndex = 8;
+            this.radioButton2.TabIndex = 9;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "管理员";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@
             this.button1.Location = new System.Drawing.Point(255, 314);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 29);
-            this.button1.TabIndex = 9;
+            this.button1.TabIndex = 10;
             this.button1.Text = "确定(&Y)";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -144,7 +144,7 @@
             this.button2.Location = new System.Drawing.Point(370, 314);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 29);
-            this.button2.TabIndex = 10;
+            this.button2.TabIndex = 11;
             this.button2.Text = "取消(&C)";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -159,12 +159,12 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "账号:";
             // 
-            // textBox4
+            // OLDPASS
             // 
-            this.textBox4.Location = new System.Drawing.Point(255, 84);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(203, 25);
-            this.textBox4.TabIndex = 12;
+            this.OLDPASS.Location = new System.Drawing.Point(255, 136);
+            this.OLDPASS.Name = "OLDPASS";
+            this.OLDPASS.Size = new System.Drawing.Size(203, 25);
+            this.OLDPASS.TabIndex = 5;
             // 
             // label6
             // 
@@ -183,15 +183,15 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(679, 371);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.OLDPASS);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NEWPASS1);
+            this.Controls.Add(this.NEWPASS);
+            this.Controls.Add(this.ID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -211,15 +211,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ID;
+        private System.Windows.Forms.TextBox NEWPASS;
+        private System.Windows.Forms.TextBox NEWPASS1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox OLDPASS;
         private System.Windows.Forms.Label label6;
     }
 }

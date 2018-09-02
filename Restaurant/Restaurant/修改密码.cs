@@ -34,6 +34,15 @@ namespace Restaurant
         private void button1_Click(object sender, EventArgs e)
         {
             bool flag = false;//数据库操作是否成功
+            string id = OLDPASS.Text;
+            string oldpass = ID.Text;
+            string newpass = NEWPASS.Text;
+            string newpass1 = NEWPASS1.Text;
+
+            if(newpass!=newpass1)
+            {
+                MessageBox.Show("两次输入的密码不一致！", "修改失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             //
             //数据库修改
             if(flag)
