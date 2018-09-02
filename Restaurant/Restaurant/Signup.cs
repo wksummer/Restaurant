@@ -47,7 +47,7 @@ namespace Restaurant
                     MessageBox.Show("请选择用户类别！", "注册失败", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                string connString = "Data Soruce=DESKTOP-4E43AKN;Initial Catalog=restaurant;Integrated Security=True";
+                string connString = "Data Source=DESKTOP-4E43AKN;Initial Catalog=restaurant;Integrated Security=True";
                 SqlConnection conn = new SqlConnection(connString);
                 string sql = String.Format("select count(*) from [user] where username='{0}' and remark= {1}", userName,remark);
                 try
@@ -65,12 +65,17 @@ namespace Restaurant
                         
                     }
                     else
-                    {
-                        MessageBox.Show("注册成功！", "注册成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        sql = String.Format("insert [User] values('{0}','{1}',{2})",userName,passWord,);
-                        MainForm mainform = new MainForm();
-                        mainform.Show();
-                        this.Visible = false;
+                    { 
+                        String sql1 = String.Format("insert [User] values('{0}','{1}',{2})",userName,passWord,remark);
+                        SqlCommand comm1 = new SqlCommand(sql1, conn);
+                        num = (int)comm1.ExecuteNonQuery();
+                        if (num == 1)
+                        {
+                            MessageBox.Show("恭喜,注册成功！", "注册成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                            MessageBox.Show("注册失败！", "注册失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
                     }
                 }
                 catch (Exception ex)

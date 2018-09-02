@@ -52,7 +52,7 @@ namespace Restaurant
                     MessageBox.Show("请选择用户类别！", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                string connString = "Data Soruce=DESKTOP-4E43AKN;Initial Catalog=restaurant;Integrated Security=True";
+                string connString = "Data Source=DESKTOP-4E43AKN;Initial Catalog=restaurant;Integrated Security=True";
                 SqlConnection conn = new SqlConnection(connString);
                 string sql = String.Format("select count(*) from [user] where username='{0}' and password ='{1}' and remark= {2}", userName, passWord,remark);
                 try
@@ -95,7 +95,8 @@ namespace Restaurant
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-
+            Signup sign = new Signup();
+            sign.Show();
         }
     }
 }
