@@ -10,30 +10,25 @@ using System.Windows.Forms;
 
 namespace Restaurant
 {
-    public partial class Login : Form
+    public partial class Signup : Form
     {
-        public Login()
+        public Signup()
         {
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-            txtUser.Focus();
-        }
-
-        private void btnLog_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string userName = txtUser.Text;
             string passWord = txtPkey.Text;
             if (userName == string.Empty || userName.Equals(" "))
             {
-                MessageBox.Show("请输入用户名！", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("请输入用户名！", "注册失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUser.Focus();
             }
             else if (passWord == string.Empty || passWord.Equals(" "))
             {
-                MessageBox.Show("请输入密码！", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("请输入密码！", "注册失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPkey.Focus();
             }
             else
@@ -49,12 +44,12 @@ namespace Restaurant
                 }
                 else
                 {
-                    MessageBox.Show("请选择用户类别！", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("请选择用户类别！", "注册失败", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
                 string connString = "Data Soruce=DESKTOP-4E43AKN;Initial Catalog=restaurant;Integrated Security=True";
                 SqlConnection conn = new SqlConnection(connString);
-                string sql = String.Format("select count(*) from [user] where username='{0}' and password ='{1}' and remark= {2}", userName, passWord,remark);
+                string sql = String.Format("select count(*) from [user] where username='{0}' and remark= {1}", userName,remark);
                 try
                 {
                     conn.Open();
@@ -62,18 +57,20 @@ namespace Restaurant
                     int num = (int)comm.ExecuteScalar();
                     if (num == 1)
                     {
-                        MessageBox.Show("欢迎进入点餐系统！", "登录成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        MainForm mainform = new MainForm();
-                        mainform.Show();
-                        this.Visible = false;
-                    }
-                    else
-                    {
-                        txtPkey.Text = "";
-                        MessageBox.Show("您输入的用户名或密码错误！", "登陆失败", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        label3.Text = "";
+                        MessageBox.Show("该用户名已被注册！", "注册失败", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         txtUser.Clear();
                         txtPkey.Clear();
                         txtUser.Focus();
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("注册成功！", "注册成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        sql = String.Format("insert [User] values('{0}','{1}',{2})",userName,passWord,);
+                        MainForm mainform = new MainForm();
+                        mainform.Show();
+                        this.Visible = false;
                     }
                 }
                 catch (Exception ex)
@@ -85,17 +82,6 @@ namespace Restaurant
                     conn.Close();
                 }
             }
-        }
-
-        private void btnChg_Click(object sender, EventArgs e)
-        {
-            this.Visible=false;
-            new 修改密码().Show();
-        }
-
-        private void btnSignup_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
