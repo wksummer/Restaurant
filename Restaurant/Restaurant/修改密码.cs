@@ -34,11 +34,10 @@ namespace Restaurant
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool flag = false;//无效
-            string userName = ID.Text;
-            string oldPass = OLDPASS.Text;
-            string newPass = NEWPASS.Text;
-            string newPass1 = NEWPASS1.Text;
+            string userName = txtUser.Text;
+            string oldPass = txtOld.Text;
+            string newPass = txtNew.Text;
+            string newPass1 = txtNew1.Text;
 
             if(newPass!=newPass1)
             {
@@ -46,23 +45,23 @@ namespace Restaurant
             }
             else if (userName == string.Empty || userName.Equals(" "))
             {
-                MessageBox.Show("请输入用户名！", "修改失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ID.Focus();
+                MessageBox.Show("请输入账号！", "修改失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUser.Focus();
             }
             else if (oldPass == string.Empty || oldPass.Equals(" "))
             {
                 MessageBox.Show("请输入旧密码！", "修改失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                OLDPASS.Focus();
+                txtOld.Focus();
             }
             else if (newPass == string.Empty || newPass.Equals(" "))
             {
                 MessageBox.Show("请输入新密码！", "修改失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                NEWPASS.Focus();
+                txtNew.Focus();
             }
             else if (newPass1 == string.Empty || newPass1.Equals(" "))
             {
                 MessageBox.Show("请重复输入新密码！", "修改失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                NEWPASS1.Focus();
+                txtNew1.Focus();
             }
             else
             {
@@ -80,14 +79,14 @@ namespace Restaurant
                     MessageBox.Show("请选择用户类别！", "修改失败", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                string connString = "Data Source=DESKTOP-4E43AKN;Initial Catalog=restaurant;Integrated Security=True";
+                string connString = "Data Source=;Initial Catalog=restaurant;Integrated Security=True";
                 SqlConnection conn = new SqlConnection(connString);
-                string sql = String.Format("update [user] set password='{0}' where username='{1}' and password ='{2}' and remark= {3}", newPass, userName, oldPass, remark);
+                string sql = String.Format("update [user] set password='{0}' where username='{1}' and password ='{2}' and remark= {3};", newPass, userName, oldPass, remark);
                 try
                 {
                     conn.Open();
                     SqlCommand comm = new SqlCommand(sql, conn);
-                    int num = (int)comm.ExecuteScalar();
+                    int num = (int)comm.ExecuteNonQuery();
                     if (num == 1)
                     {
                         MessageBox.Show("修改密码成功", "修改成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -96,12 +95,12 @@ namespace Restaurant
                     }
                     else
                     {
-                        NEWPASS.Text = "";
-                        NEWPASS1.Text = "";
+                        txtNew.Text = "";
+                        txtNew1.Text = "";
                         MessageBox.Show("您输入的用户名或密码错误！", "修改失败", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        ID.Clear();
-                        OLDPASS.Clear();
-                        ID.Focus();
+                        txtUser.Clear();
+                        txtOld.Clear();
+                        txtUser.Focus();
                     }
                 }
                 catch (Exception ex)
@@ -113,14 +112,18 @@ namespace Restaurant
                     conn.Close();
                 }
             }
-           // this.Close();
-            
+           // this.Close();        
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
             new Login().Show();
+        }
+
+        private void 修改密码_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

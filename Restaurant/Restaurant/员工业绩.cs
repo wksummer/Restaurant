@@ -9,16 +9,16 @@ using System.Windows.Forms;
 
 namespace Restaurant
 {
-    public partial class ModelForm : Form
+    public partial class 员工业绩 : Form
     {
-        public ModelForm()
+        public 员工业绩()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }

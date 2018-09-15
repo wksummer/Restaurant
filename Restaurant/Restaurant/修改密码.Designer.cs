@@ -32,15 +32,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.TextBox();
-            this.NEWPASS = new System.Windows.Forms.TextBox();
-            this.NEWPASS1 = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtNew = new System.Windows.Forms.TextBox();
+            this.txtNew1 = new System.Windows.Forms.TextBox();
             this.rdoNomal = new System.Windows.Forms.RadioButton();
             this.rdoAdm = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.OLDPASS = new System.Windows.Forms.TextBox();
+            this.txtOld = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -85,26 +85,26 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "确认新密码:";
             // 
-            // ID
+            // txtUser
             // 
-            this.ID.Location = new System.Drawing.Point(255, 88);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(203, 25);
-            this.ID.TabIndex = 4;
+            this.txtUser.Location = new System.Drawing.Point(255, 88);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(203, 25);
+            this.txtUser.TabIndex = 4;
             // 
-            // NEWPASS
+            // txtNew
             // 
-            this.NEWPASS.Location = new System.Drawing.Point(255, 181);
-            this.NEWPASS.Name = "NEWPASS";
-            this.NEWPASS.Size = new System.Drawing.Size(203, 25);
-            this.NEWPASS.TabIndex = 6;
+            this.txtNew.Location = new System.Drawing.Point(255, 181);
+            this.txtNew.Name = "txtNew";
+            this.txtNew.Size = new System.Drawing.Size(203, 25);
+            this.txtNew.TabIndex = 6;
             // 
-            // NEWPASS1
+            // txtNew1
             // 
-            this.NEWPASS1.Location = new System.Drawing.Point(255, 228);
-            this.NEWPASS1.Name = "NEWPASS1";
-            this.NEWPASS1.Size = new System.Drawing.Size(203, 25);
-            this.NEWPASS1.TabIndex = 7;
+            this.txtNew1.Location = new System.Drawing.Point(255, 228);
+            this.txtNew1.Name = "txtNew1";
+            this.txtNew1.Size = new System.Drawing.Size(203, 25);
+            this.txtNew1.TabIndex = 7;
             // 
             // rdoNomal
             // 
@@ -159,12 +159,12 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "账号:";
             // 
-            // OLDPASS
+            // txtOld
             // 
-            this.OLDPASS.Location = new System.Drawing.Point(255, 136);
-            this.OLDPASS.Name = "OLDPASS";
-            this.OLDPASS.Size = new System.Drawing.Size(203, 25);
-            this.OLDPASS.TabIndex = 5;
+            this.txtOld.Location = new System.Drawing.Point(255, 136);
+            this.txtOld.Name = "txtOld";
+            this.txtOld.Size = new System.Drawing.Size(203, 25);
+            this.txtOld.TabIndex = 5;
             // 
             // label6
             // 
@@ -183,15 +183,15 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(679, 371);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.OLDPASS);
+            this.Controls.Add(this.txtOld);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.rdoAdm);
             this.Controls.Add(this.rdoNomal);
-            this.Controls.Add(this.NEWPASS1);
-            this.Controls.Add(this.NEWPASS);
-            this.Controls.Add(this.ID);
+            this.Controls.Add(this.txtNew1);
+            this.Controls.Add(this.txtNew);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -200,6 +200,7 @@
             this.Name = "修改密码";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "点餐系统";
+            this.Load += new System.EventHandler(this.修改密码_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,15 +212,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox ID;
-        private System.Windows.Forms.TextBox NEWPASS;
-        private System.Windows.Forms.TextBox NEWPASS1;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtNew;
+        private System.Windows.Forms.TextBox txtNew1;
         private System.Windows.Forms.RadioButton rdoNomal;
         private System.Windows.Forms.RadioButton rdoAdm;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox OLDPASS;
+        private System.Windows.Forms.TextBox txtOld;
         private System.Windows.Forms.Label label6;
     }
 }

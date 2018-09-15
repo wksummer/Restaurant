@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Restaurant
 {
-    public partial class Signup : Form
+    public partial class AddNor : Form
     {
-        public Signup()
+        public AddNor()
         {
             InitializeComponent();
         }
@@ -33,23 +33,9 @@ namespace Restaurant
             }
             else
             {
-                string remark;
-                if (rdoNorm.Checked == true)
-                {
-                    remark = "1";
-                }
-                else if (rdoAdm.Checked == true)
-                {
-                    remark = "2";
-                }
-                else
-                {
-                    MessageBox.Show("请选择用户类别！", "注册失败", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-                string connString = "Data Source=;Initial Catalog=restaurant;Integrated Security=True";
+                string connString = "Data Source=DESKTOP-4E43AKN;Initial Catalog=restaurant;Integrated Security=True";
                 SqlConnection conn = new SqlConnection(connString);
-                string sql = String.Format("select count(*) from [user] where username='{0}'", userName,remark);
+                string sql = String.Format("select count(*) from [user] where username='{0}' and remark= {1}", userName,"1");
                 try
                 {
                     conn.Open();
@@ -57,24 +43,22 @@ namespace Restaurant
                     int num = (int)comm.ExecuteScalar();
                     if (num == 1)
                     {
-
                         MessageBox.Show("该用户名已被注册！", "注册失败", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        txtUser.Clear();
                         txtPkey.Clear();
                         txtUser.Focus();
-                        
+
                     }
                     else
-                    { 
-                        String sql1 = String.Format("insert [User] values('{0}','{1}',{2})",userName,passWord,remark);
+                    {
+                        String sql1 = String.Format("insert [User] values('{0}','{1}',{2})", userName, passWord, "1");
                         SqlCommand comm1 = new SqlCommand(sql1, conn);
                         num = (int)comm1.ExecuteNonQuery();
                         if (num == 1)
                         {
-                            MessageBox.Show("恭喜,注册成功！", "注册成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("恭喜,添加普通用户成功！", "添加成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
-                            MessageBox.Show("注册失败！", "注册失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("添加失败！", "添加失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                 }

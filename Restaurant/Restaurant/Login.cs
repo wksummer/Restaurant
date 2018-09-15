@@ -12,6 +12,7 @@ namespace Restaurant
 {
     public partial class Login : Form
     {
+        public static string userName;
         public Login()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace Restaurant
 
         private void btnLog_Click(object sender, EventArgs e)
         {
-            string userName = txtUser.Text;
+            userName = txtUser.Text;
             string passWord = txtPkey.Text;
             if (userName == string.Empty || userName.Equals(" "))
             {
@@ -52,7 +53,7 @@ namespace Restaurant
                     MessageBox.Show("请选择用户类别！", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                string connString = "Data Source=DESKTOP-4E43AKN;Initial Catalog=restaurant;Integrated Security=True";
+                string connString = "Data Source=;Initial Catalog=restaurant;Integrated Security=True";
                 SqlConnection conn = new SqlConnection(connString);
                 string sql = String.Format("select count(*) from [user] where username='{0}' and password ='{1}' and remark= {2}", userName, passWord,remark);
                 try
@@ -63,8 +64,17 @@ namespace Restaurant
                     if (num == 1)
                     {
                         MessageBox.Show("欢迎进入点餐系统！", "登录成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        MainForm mainform = new MainForm();
-                        mainform.Show();
+                        if(remark.Equals("2"))
+                        {
+                            Administrator admin = new Administrator();
+                            admin.Show();
+                        }
+                        else
+                        {
+                            Staff staff= new Staff();
+                            staff.Show();
+                        }
+
                         this.Visible = false;
                     }
                     else
@@ -72,8 +82,7 @@ namespace Restaurant
                         txtPkey.Text = "";
                         MessageBox.Show("您输入的用户名或密码错误！", "登陆失败", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         txtUser.Clear();
-                        txtPkey.Clear();
-                        txtUser.Focus();
+                        txtPkey.Focus();
                     }
                 }
                 catch (Exception ex)

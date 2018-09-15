@@ -43,6 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNor.Designer.cs">
+      <DependentUpon>AddNor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,11 +67,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModelForm.cs">
+    <Compile Include="Performance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModelForm.Designer.cs">
-      <DependentUpon>ModelForm.cs</DependentUpon>
+    <Compile Include="Performance.designer.cs">
+      <DependentUpon>Performance.cs</DependentUpon>
     </Compile>
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
@@ -67,22 +79,70 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
-    <Compile Include="修改密码.cs">
+    <Compile Include="Staff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="修改密码.Designer.cs">
-      <DependentUpon>修改密码.cs</DependentUpon>
+    <Compile Include="Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="修改密码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="修改密码.designer.cs">
+      <DependentUpon>修改密码.cs</DependentUpon>
+    </Compile>
+    <Compile Include="修改普通用户.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="修改普通用户.Designer.cs">
+      <DependentUpon>修改普通用户.cs</DependentUpon>
+    </Compile>
+    <Compile Include="员工业绩.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="员工业绩.Designer.cs">
+      <DependentUpon>员工业绩.cs</DependentUpon>
+    </Compile>
+    <Compile Include="套餐管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="套餐管理.designer.cs">
+      <DependentUpon>套餐管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="热销套餐.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="热销套餐.Designer.cs">
+      <DependentUpon>热销套餐.cs</DependentUpon>
+    </Compile>
+    <Compile Include="统计查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="统计查询.designer.cs">
+      <DependentUpon>统计查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="饭菜信息管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="饭菜信息管理.designer.cs">
+      <DependentUpon>饭菜信息管理.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddNor.resx">
+      <DependentUpon>AddNor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModelForm.resx">
-      <DependentUpon>ModelForm.cs</DependentUpon>
+    <EmbeddedResource Include="Performance.resx">
+      <DependentUpon>Performance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,8 +156,29 @@
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="修改密码.resx">
       <DependentUpon>修改密码.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="修改普通用户.resx">
+      <DependentUpon>修改普通用户.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="员工业绩.resx">
+      <DependentUpon>员工业绩.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="套餐管理.resx">
+      <DependentUpon>套餐管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="热销套餐.resx">
+      <DependentUpon>热销套餐.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="统计查询.resx">
+      <DependentUpon>统计查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="饭菜信息管理.resx">
+      <DependentUpon>饭菜信息管理.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
